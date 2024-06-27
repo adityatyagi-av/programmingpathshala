@@ -43,7 +43,9 @@ const NavItems = [
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="flex justify-between my-6 mx-8">
+    <div className="border border-x-0 border-y-0 border-b-[1px] border-[#27272A]">
+      <div className="max-w-screen-xl mx-auto">
+    <div className="flex  justify-between my-6 mx-8">
       {/* code for left side  */}
       <nav className="flex mt-2 gap-8">
         {/* //code for logo */}
@@ -180,6 +182,8 @@ text-align: left;
           </Sheet>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
