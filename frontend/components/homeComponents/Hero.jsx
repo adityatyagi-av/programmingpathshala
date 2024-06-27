@@ -16,7 +16,7 @@ const Hero = () => {
           solutions. All directly in Slack the moment an incident happens.
         </h5>
       </header>
-      <button className="bg-[#FAFAFA] my-12 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
+      <button className="bg-[#FAFAFA] mt-12 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
         <span className="flex">
           <p className="text-[#18181B]">Get Started</p>
           <svg
@@ -41,7 +41,7 @@ const Hero = () => {
       {/* hero image */}
       
     </div>
-    <Image width={1024} height={623} className="mx-auto" src="/images/image.png" alt="Programming Pathshala"/>
+    <Image width={1024} height={623} className="mx-auto my-12" src="/images/image.png" alt="Programming Pathshala"/>
     </>
   );
 };
