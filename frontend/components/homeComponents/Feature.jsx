@@ -79,7 +79,7 @@ const Feature = () => {
       </div>
 
       {/* code for 2nd feature */}
-            <div className="my-24 md:my-36 md:mx-[304px]">
+            <div className="mt-24 md:mt-36 md:mx-[304px]">
         
 
                 <h1 className="text-3xl font-semibold leading-9 tracking-[-0.0075em] md:text-5xl md:font-extrabold md:leading-[48px] md:tracking-[-0.012em] text-center text-[#FAFAFA]">

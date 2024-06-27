@@ -18,10 +18,10 @@ const Hero = () => {
       </header>
       <button className="bg-[#FAFAFA] mt-12 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
         <span className="flex">
-          <p className="text-[#18181B]">Get Started</p>
+          <p className="text-sm font-semibold text-left leading-7 text-[#18181B]">Get Started</p>
           <svg
             width="6"
-            className="dark:text-white my-2 ml-2.5"
+            className="dark:text-white my-auto ml-2.5"
             height="10"
             viewBox="0 0 6 10"
             fill="none"

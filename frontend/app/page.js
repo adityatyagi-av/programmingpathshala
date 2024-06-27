@@ -1,3 +1,4 @@
+import Contact from "@/components/homeComponents/Contact";
 import Feature from "@/components/homeComponents/Feature";
 import Hero from "@/components/homeComponents/Hero";
 import Image from "next/image";
@@ -7,6 +8,7 @@ export default function Home() {
     <div >
     <Hero/>
     <Feature/>
+    <Contact/>
     </div>
   );
 }
