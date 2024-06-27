@@ -1,11 +1,10 @@
-import Navbar from "@/components/Navbar";
+import Hero from "@/components/homeComponents/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="max-w-screen-xl mx-auto">
-    <Navbar/>
-    
+    <div >
+    <Hero/>
     </div>
   );
 }
