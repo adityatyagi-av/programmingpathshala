@@ -64,10 +64,10 @@ const Feature = () => {
                             <div dangerouslySetInnerHTML={{ __html: item.iconSvg }} />
                             </div>
                                   
-                            <h3 className="text-2xl font-semibold leading-9 tracking-[-0.006em] text-left text-[#D9D9D9] py-6">
+                            <h3 className="text-2xl font-semibold leading-9 tracking-[-0.006em] text-left text-gray-800 dark:text-[#D9D9D9] py-6">
                                 {item.title}
                             </h3>
-                            <p className="text-sm font-normal leading-7 text-left text-[#D9D9D9]">
+                            <p className="text-sm font-normal leading-7 text-left text-gray-700 dark:text-[#D9D9D9]">
                                 {item.description}
                             </p>
 
@@ -82,10 +82,10 @@ const Feature = () => {
             <div className="mt-24 md:mt-36 md:mx-[304px]">
         
 
-                <h1 className="text-3xl font-semibold leading-9 tracking-[-0.0075em] md:text-5xl md:font-extrabold md:leading-[48px] md:tracking-[-0.012em] text-center text-[#FAFAFA]">
+                <h1 className="text-3xl font-semibold leading-9 tracking-[-0.0075em] md:text-5xl md:font-extrabold md:leading-[48px] md:tracking-[-0.012em] text-center text-black dark:text-[#FAFAFA]">
                     Instant setup, no custom code    
                 </h1>
-                <h5 className="text-sm leading-[28px] py-6 px-1 md:px-0  md:text-lg font-normal md:leading-[18px] text-center text-[#D9D9D9]">
+                <h5 className="text-sm leading-[28px] py-6 px-1 md:px-0  md:text-lg font-normal md:leading-[18px] text-center text-gray-800 dark:text-[#D9D9D9]">
                 Invite the bot, pick a channel, and you're set—no custom code needed, and no vendor lock-in.
                 </h5>
                 <Image width={672} height={415} src="/images/image2.png" alt="programming pathshala image"/>

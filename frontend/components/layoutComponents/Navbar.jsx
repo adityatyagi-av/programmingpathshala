@@ -75,8 +75,14 @@ const Navbar = () => {
                 fill="#FAFAFA"
               />
             </svg>
-            <h2 className="hidden md:block">Programming Pathshala</h2>
-            <h2 className="md:hidden">PPA</h2>
+            {/* font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 28px;
+text-align: left;
+ */}
+            <h2 className="text-base font-medium leading-7 text-left hidden md:block dark:text-[#FFFFFF]">Programming Pathshala</h2>
+            <h2 className="md:hidden text-base font-medium leading-7 text-left dark:text-[#FFFFFF]">PPA</h2>
           </div>
         </Link>
         {/* code for navitems */}
@@ -85,7 +91,7 @@ const Navbar = () => {
             {NavItems.map((item) => {
               return (
                 <li key={item.id}>
-                  <Link href={item.link}>{item.name}</Link>
+                  <Link className="dark:text-[#D9D9D9] text-gray-800" href={item.link}>{item.name}</Link>
                 </li>
               );
             })}
@@ -115,14 +121,14 @@ text-align: left;
             )}
           </button>
           <button
-            className="text-[#D9D9D9] text-base leading-7  text-left font-normal"
+            className="dark:text-[#D9D9D9] text-gray-900 text-base leading-7  text-left font-normal"
             variant="link"
           >
            <Link href="/login"> Login</Link>
           </button>
           <button
             href="#"
-            className="border rounded-[6px] text-black bg-[#FAFAFA] px-4 py-1"
+            className="border border-gray-800 rounded-[6px] text-black bg-[#FAFAFA] px-4 py-1"
           >
             <Link href="/signup" className="text-lg leading-7 text-left font-semibold">Sign Up</Link>
           </button>

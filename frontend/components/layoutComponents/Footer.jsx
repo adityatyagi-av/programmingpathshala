@@ -35,8 +35,14 @@ const Footer = () => {
                 fill="#FAFAFA"
               />
             </svg>
-            <h2 className="hidden md:block">Programming Pathshala</h2>
-            <h2 className="md:hidden">PPA</h2>
+            {/* font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 28px;
+text-align: left; */}
+
+            <h2 className="hidden md:block text-base font-medium leading-7 text-left text-gray-800 dark:text-[#D9D9D9]">Programming Pathshala</h2>
+            <h2 className="md:hidden text-gray-800 dark:text-[#D9D9D9]">PPA</h2>
           </div>
         </Link>
     
@@ -46,8 +52,8 @@ const Footer = () => {
       {/* code for left side */}
       <div className="flex gap-2.5">
         <div className="flex items-center justify-center gap-3 md:gap-8">
-            <Link className="text-sm font-normal leading-7 text-left text-[#D9D9D9]" href="#">contact us</Link>
-            <Link className="text-sm font-normal leading-7 text-left text-[#D9D9D9]" href="#">terms of service</Link>
+            <Link className="text-sm font-normal leading-7 text-left text-gray-800 dark:text-[#D9D9D9]" href="#">contact us</Link>
+            <Link className="text-sm font-normal leading-7 text-left text-gray-800 dark:text-[#D9D9D9]" href="#">terms of service</Link>
         </div>
         
         </div>  

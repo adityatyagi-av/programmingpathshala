@@ -4,7 +4,7 @@ const Contact = () => {
   return (
 <div className='my-36'>
 
-    <h1 className='text-5xl text-[#FAFAFA] font-extrabold leading-[48px] tracking-[-0.012em] text-center'>Get in touch</h1>
+    <h1 className='text-5xl text-black dark:text-[#FAFAFA] font-extrabold leading-[48px] tracking-[-0.012em] text-center'>Get in touch</h1>
     {/* //styleName: h5;
 font-family: Inter;
 font-size: 18px;
@@ -12,8 +12,8 @@ font-weight: 400;
 line-height: 18px;
 text-align: center; */}
 
-    <h5 className='text-lg font-normal text-[#FAFAFA] my-6 leading-[18px] text-center'>Request a demo, or hop on a call.</h5>
-    <button className="bg-[#FAFAFA] px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
+    <h5 className='text-lg font-normal text-gray-800 dark:text-[#FAFAFA] my-6 leading-[18px] text-center'>Request a demo, or hop on a call.</h5>
+    <button className="bg-[#FAFAFA] border border-gray-950 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
         <span className="flex">
       <p className="text-sm font-semibold text-left leading-7 text-[#18181B]">Get Started</p>
           <svg

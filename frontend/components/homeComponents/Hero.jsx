@@ -11,12 +11,12 @@ const Hero = () => {
           Information you need during on-call emergencies
         </h1>
 
-        <h5 className="text-md mt-6  font-normal text-[#D9D9D9] leading-[18px] text-center ">
+        <h5 className="text-md mt-6  font-normal text-gray-700 dark:text-[#D9D9D9] leading-[18px] text-center ">
           Quickly link new on-call tickets to similar past incidents and their
           solutions. All directly in Slack the moment an incident happens.
         </h5>
       </header>
-      <button className="bg-[#FAFAFA] mt-12 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
+      <button className="bg-[#FAFAFA] border border-gray-950 mt-12 px-4 py-1 flex items-center justify-center text-center max-w-fit rounded-[6px] mx-auto ">
         <span className="flex">
           <p className="text-sm font-semibold text-left leading-7 text-[#18181B]">Get Started</p>
           <svg
