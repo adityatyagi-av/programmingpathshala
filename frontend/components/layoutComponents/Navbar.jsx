@@ -118,13 +118,13 @@ text-align: left;
             className="text-[#D9D9D9] text-base leading-7  text-left font-normal"
             variant="link"
           >
-            Login
+           <Link href="/login"> Login</Link>
           </button>
           <button
             href="#"
             className="border rounded-[6px] text-black bg-[#FAFAFA] px-4 py-1"
           >
-            <p className="text-lg leading-7 text-left font-semibold">Sign Up</p>
+            <Link href="/signup" className="text-lg leading-7 text-left font-semibold">Sign Up</Link>
           </button>
         </div>
         {/* code for mobile responsive */}
@@ -142,23 +142,23 @@ text-align: left;
                   <path
                     d="M4 12H20"
                     stroke="#D9D9D9"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M4 6H20"
                     stroke="#D9D9D9"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M4 18H20"
                     stroke="#D9D9D9"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </Button>
