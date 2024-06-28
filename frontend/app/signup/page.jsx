@@ -1,22 +1,58 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog"
+import { useState } from "react";
 
 const Page = () => {
+  const [showMessage,setShowMessage]=useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  
-  const onFormSubmit = (data) => {
-    alert(JSON.stringify(data));
-    console.log(data);
+  const onDialogClose = () => {
+    setShowMessage(false)
   };
-  
+  const onFormSubmit = async (data) => {
+    try {
+      
+      const response = await axios.post(
+        "http://localhost:8000/api/register-user",
+        { name: data.name,
+          email: data.email,
+          password: data.password,
+          confirmpassword:data.confirmpassword
+         }
+      );
+      setShowMessage(true);
+      reset();
+      
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message || "Registration failed");
+      } else if (error.request) {
+        alert("No response from server. Please try again later.");
+      } else {
+        alert("An error occurred: " + error.message);
+      }
+    }
+  };
+
   const onErrors = (errors) => console.error(errors);
 
   return (
+
     <>
       <main className="flex overflow-hidden">
         <div className="py-12 flex-1 lg:flex lg:justify-center lg:h-screen lg:overflow-auto">
@@ -47,7 +83,9 @@ const Page = () => {
                   })}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.name.message}
+                  </p>
                 )}
               </div>
               <div>
@@ -67,7 +105,9 @@ const Page = () => {
                   })}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
               <div>
@@ -97,7 +137,9 @@ const Page = () => {
                     className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-gray-800 dark:text-gray-200 shadow-sm rounded-lg"
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.phone.message}
+                    </p>
                   )}
                 </div>
               </div>
@@ -119,7 +161,9 @@ const Page = () => {
                   })}
                 />
                 {errors.password && (
-                  <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.password.message}
+                  </p>
                 )}
               </div>
               <div>
@@ -137,19 +181,35 @@ const Page = () => {
                   })}
                 />
                 {errors.confirmpassword && (
-                  <p className="text-red-500 text-sm mt-1">{errors.confirmpassword.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.confirmpassword.message}
+                  </p>
                 )}
               </div>
               <button
                 type="submit"
                 className="w-full px-4 py-2 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150"
               >
-                Submit
+                Sign Up
               </button>
             </form>
           </div>
         </div>
       </main>
+      <Dialog open={showMessage} onDismiss={onDialogClose}>
+        <DialogContent>
+          <DialogClose asChild>
+            <button className="absolute top-0 right-0 p-2">
+             
+              <span className="sr-only">Close</span>
+            </button>
+          </DialogClose>
+          <DialogTitle>Form Submitted Successfully</DialogTitle>
+          <DialogDescription>
+            Your registration has been successful. Thank you!
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
